@@ -13,8 +13,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import br.com.rodrigo.groceryshop.MainTheme
 import br.com.rodrigo.groceryshop.R
+import br.com.rodrigo.groceryshop.ui.components.VerticalDivider
+import br.com.rodrigo.groceryshop.ui.screens.home.components.CategorySection
+import br.com.rodrigo.groceryshop.ui.screens.home.components.Promotions
 import br.com.rodrigo.groceryshop.ui.theme.GroceryShopTheme
 
 @Composable
@@ -23,6 +25,8 @@ fun Content(paddingValues: PaddingValues) {
         Header()
         Spacer(modifier = Modifier.height(16.dp))
         Promotions()
+        Spacer(modifier = Modifier.height(16.dp))
+        CategorySection()
     }
 }
 
@@ -101,21 +105,6 @@ fun QrButton(){
                 .padding(16.dp)
         )
     }
-}
-
-@Composable
-fun VerticalDivider() {
-    Divider(
-        color = Color(0xFFF1F1F1),
-        modifier = Modifier
-            .width(1.dp)
-            .height(32.dp)
-    )
-}
-
-@Composable
-fun Promotions() {
-
 }
 
 @Preview
